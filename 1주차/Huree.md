@@ -7,7 +7,7 @@
 
 
 <p align="left">
-  <img src="img/huree.png" width="240"/>
+  <img src="img/huree1.png" width="240"/>
 </p>
 
 운영체제는 하드웨어 바로 윗단에 설치되어 있는 소프트웨어
