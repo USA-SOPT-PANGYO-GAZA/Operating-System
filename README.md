@@ -1,6 +1,9 @@
+<img width="150" src="https://user-images.githubusercontent.com/63908856/153793651-1eb7a18a-0e1c-47a0-b97b-efd058969e9a.png" align="right">
+
 # Operating-System
 
-- [강의 링크](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
+
+- [운영체제 강의 링크 - 이화여대 반효경 교수님](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
 
 ## 각 주차별 정리 md 파일을 만드는 법
 
@@ -19,4 +22,4 @@
 
 ---
 
-- [1주차 스터디](./발표/1주차.md)
+- [1주차 발표](./발표/1주차.md)
