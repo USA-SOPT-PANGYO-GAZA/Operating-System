@@ -35,7 +35,7 @@ OS는 하드웨어 Resource에 대한 abstraction을 한다.
 
 OS가 abstraction을 제공하느냐에 따라서 개발자가 개발하는 접근하는 방식이 달라진다.
 
-iOS에서는 카메라 작동에 대한 추상화를
+iOS에서는 카메라 작동에 대한 추상화를 아래의 문서와 같이 제공한다.
 
 [Apple Developer Documentation](https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture)
 
