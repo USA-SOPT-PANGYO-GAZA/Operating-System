@@ -2,9 +2,9 @@
 
 이번 챕터에서 살펴볼 것들 : 컴퓨터 시스템에서 하드웨어가 어떻게 동작하는지, 프로그램들이 하드웨어 위에서 어떻게 돌아가는지에 대해
 
-<p align="center">
-  <img src="img/noah1.png"/>
-</p>
+
+<img src="img/noah1.png" width="500"/>
+
 
 # 컴퓨터 시스템 구조
 
@@ -81,17 +81,17 @@ I/O 컨트롤러 한테 시키고, CPU는 계속해서 다음 instruction을 실
 
 타이머라는 하드웨어를 두는 목적 : 특정 프로그램이 CPU를 독점하는 것을 막기 위해
 
-타이머 내부 구현
+### 타이머 실행 flowchart
 
-이부분 다이어그램 쓰기
-
-1. CPU가 instruction을 실행한다.
-2. 타이머 시간이 다 되면 타이머가 CPU한테 Interrupt를 건다.
-3. CPU는 instruction을 실행하다가 instruction이 끝나면
-   Interrupt line을 확인한다.
-4. interrupt yes or no 분기
-5. CPU는 하던일을 잠시 멈춘다. CPU의 제어권이 사용자의 프로그램으로부터 운영체제에게 넘어간다.
-6. 운영체제가 타이머에 값을 세팅해서 CPU를 다시 프로그램에게 넘겨준다.
+```mermaid
+flowchart TD
+  A[CPU가 instruction을 실행한다.] --> B{타이머 시간이 다되었는가?};
+  B -- Yes --> C[타이머가 CPU한테 Interrupt를 건다.];
+  B -- No --> A;
+  C[CPU가 Interrupt line을 확인한다] --> D[CPU의 제어권이 사용자의 프로그램으로부터 운영체제에게 넘어간다];
+  D --> E[운영체제가 타이머에 값을 세팅해서 CPU를 다시 프로그램에게 넘겨준다];
+  
+```
 
 프로그램이 n개가 있다고 하면 cpu가 n개의 프로그램한테 하나씩 넘어갔다가 다시 앞에걸로 되돌아오고 이런식으로 cpu가 넘어가는 것이 운영체제가 관리를 하면서 타이머의 도움을 받아서 실행이 되고 있는 것이다.
 
@@ -187,7 +187,7 @@ DMA가 로컬 버퍼에 있는 내용을 메인 메모리로 카피하고, 해�
 사실 CPU가 메모리에 직접 접근하지는 않고, 레지스터를 통해 접근한다.
 
 <p align="center">
-  <img src="img/noah5.png"/>
+  <img src="img/noah5.png"/ width="500">
 </p>
 
 - 이미지 출처 www.teach-ict.com
@@ -314,7 +314,7 @@ I/O는 커널을 통해서만 할 수 있다.
 ### 서로 다른 입출력 명령어
 
 <p align="center">
-  <img src="img/noah9.png"/>
+  <img src="img/noah9.png"/ width="500">
 </p>
 
 **CPU에서 실행할 수 있는 일반적인 I/O instruction(좌측 그림)**
@@ -327,7 +327,7 @@ I/O는 커널을 통해서만 할 수 있다.
 ## 저장장치 계층구조
 
 <p align="center">
-  <img src="img/noah10.png"/>
+  <img src="img/noah10.png"/ width="400">
 </p>
 
 - Register → CPU
@@ -408,7 +408,7 @@ CPU와 메모리간의 속도차이를 완충하기 위해 캐시 메모리를 �
 ## M1 Memory Swap Issue
 
 <p align="center">
-  <img src="img/noah13.png"/>
+  <img src="img/noah13.png"/ width="400">
 </p>
 
 - 이미지 출처 Apple
