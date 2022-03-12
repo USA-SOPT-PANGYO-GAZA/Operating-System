@@ -184,7 +184,7 @@ int main() {
 
 </aside>
 
-
+<img width="600" alt="스크린샷 2022-03-07 오후 2 54 26" src="https://user-images.githubusercontent.com/55099365/158005238-7b296576-bf74-4a6e-bf65-3f02e29d9510.png">
 
 1️⃣  자식 프로세스를 생성하고 나서 자식 프로세스가 종료되길 기다리면서 **blocked 상태**가 된다.
 
@@ -263,6 +263,8 @@ A. 정보를 주고 받으면서 실행을 하는 것 → 이를 위한 메커�
 
 </aside>
 
+![스크린샷 2022-03-12 오후 2 31 40](https://user-images.githubusercontent.com/55099365/158005271-29c9b342-b506-46e2-960b-816b714bec26.png)
+
 - **Message Passing** : 프로세스 A가 프로세스 B에게 **메시지를 전달하는 방법**
     - 프로세스는 독립적이기 때문에 자기 메모리 주소 공간만 볼 수 있다.
     - 프로세스가 다른 프로세스에게 메시지를 전달할 방법이 원칙적으로는 없다.
@@ -274,10 +276,17 @@ A. 정보를 주고 받으면서 실행을 하는 것 → 이를 위한 메커�
     
     : 상대 메시지 프로세스의 이름을 **명시적**으로 표시
     
+     ![스크린샷 2022-03-12 오후 2 32 13](https://user-images.githubusercontent.com/55099365/158005289-b5e940ae-b5ac-44c9-abe6-ee26f3534092.png)
+    
     **Indirect Communication**
     
     : mailbox(또는 port)를 통해 메시지를 **간접 전달**
     
+    ![스크린샷 2022-03-12 오후 2 32 34](https://user-images.githubusercontent.com/55099365/158005301-358fa15e-f67d-40fe-b584-32b855efa1c9.png)
+
+<br/>
+
+![스크린샷 2022-03-12 오후 2 33 09](https://user-images.githubusercontent.com/55099365/158005318-d055a9cd-adec-4671-919e-6580ab0ebd3e.png)
 
 - Shared Memory : 서로 다른 프로세스 간에도 **일부 주소 공간을 공유**
     - 물리적인 메모리에 매핑할 때 **일부 영역은 공유되도록 매핑**
@@ -286,7 +295,7 @@ A. 정보를 주고 받으면서 실행을 하는 것 → 이를 위한 메커�
         - 처음에는 kernel의 도움을 받지만 한 번 도움을 받고 나면 사용자 프로세스들끼리 공유하면 된다.
         
         ✅  ***따라서 신중하게 shared memory 영역을 사용해야 한다. → 두 프로세스가 상당히 신뢰하는 관계***
-        
+
 - thread : thread는 사실상 하나의 프로세스이므로 프로세스 간 협력으로 보기는 어렵지만 동일한 process를 구성하는 thread들간에는 주소 공간을 공유하므로 협력이 가능
     
     ✅  ***프로세스 간의 협력은 아니다. 하지만 thread들끼리의 공유는 쉽다.***
@@ -295,9 +304,12 @@ A. 정보를 주고 받으면서 실행을 하는 것 → 이를 위한 메커�
     
     A. thread들끼리 주소 공간을 완전히 공유하고 있기 때문에
     
-<br/>    
+<br/>   
+
 
 ## CPU and I/O Bursts in Program Execution
+
+![스크린샷 2022-03-12 오후 2 33 44](https://user-images.githubusercontent.com/55099365/158005334-32c1f626-6a76-47c4-ab27-2c66f9f37567.png)
 
 | Process | State |
 | --- | --- |
@@ -326,6 +338,8 @@ A. 정보를 주고 받으면서 실행을 하는 것 → 이를 위한 메커�
 - **하나만 진득하게 프로그램** : 중간에 사람의 Interaction이 들어오지 않는 프로그램, CPU를 사용해서 오랫동안 계산을 해야하는 프로그램
 
 ### CPU-burst Time의 분포
+
+![스크린샷 2022-03-12 오후 2 34 06](https://user-images.githubusercontent.com/55099365/158005345-b9d43bc8-0660-4d09-8dfc-a3b68fc8552c.png)
 
 - **I/O bound job** : CPU를 아주 짧게 쓰고 중간에 I/O가 끼어드는 작업
     - **many short** CPU bursts
